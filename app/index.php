@@ -1,9 +1,9 @@
 <?php
 // print(phpinfo());
-// 告知nginx不需要缓存当前请求
+// 流式输出，关闭nginx buffer缓存
 header('X-Accel-Buffering: no');
 // cgi-buffering 设置为空
-#define('CGIBUFFERING', 0);
+define('CGIBUFFERING', 0);
 echo str_repeat('a', 3*1);
 flush();
 sleep(3);
