@@ -1,5 +1,11 @@
 <?php
-// print(phpinfo());
+$pdo = new PDO("mysql:host=db;dbname=mysql", 'root', '123');
+
+$unbufferedResult = $pdo->query("SELECT * FROM user");
+foreach ($unbufferedResult as $row) {
+    echo $row['User'] . PHP_EOL;
+}
+print(phpinfo());
 // 流式输出，关闭nginx buffer缓存
 header('X-Accel-Buffering: no');
 // cgi-buffering 设置为空
