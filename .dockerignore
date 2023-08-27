@@ -17,5 +17,5 @@ docker-compose.yml
 
 
 nginx_config
-nginx_logs
+logs
 nodemon.json

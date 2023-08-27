@@ -2,7 +2,7 @@ FROM php:7.4-fpm
 
 RUN docker-php-ext-install pdo pdo_mysql opcache
 
-COPY ./opcache.ini /usr/local/etc/php/conf.d/
+COPY ./php/opcache.ini /usr/local/etc/php/conf.d/
 
 WORKDIR /var/www/html
 

@@ -1,4 +1,4 @@
 node_modules
 .log
-nginx_logs
+logs
 data_volume
